@@ -1,5 +1,6 @@
-package scalable.controller;
+package com.bits.scalable.controller;
 
+import com.bits.scalable.domain.Customer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import scalable.domain.Customer;
-import scalable.service.CustomerService;
+import com.bits.scalable.service.CustomerService;
 
 @RestController
 @RequestMapping("/customers")
@@ -23,17 +23,17 @@ public class CustomerController {
     }
 
     @PostMapping("/save_customer")
-    public Customer saveDepartment(@RequestBody Customer customer) {
+    public Customer saveCustomer(@RequestBody Customer customer) {
         return customerService.saveCustomer(customer);
     }
 
     @GetMapping("/get_customer")
-    public Customer findByProductId(@RequestParam("id") Long customerId) {
+    public Customer findByCustomerId(@RequestParam("id") Long customerId) {
         return customerService.getByCustomerId(customerId);
     }
 
     @DeleteMapping("/delete_customer")
-    public void deleteByProductId(@RequestParam("id") Long customerId) {
+    public void deleteByCustomerId(@RequestParam("id") Long customerId) {
         customerService.deleteByCustomerId(customerId);
     }
 

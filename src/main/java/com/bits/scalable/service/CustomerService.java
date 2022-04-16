@@ -1,9 +1,9 @@
-package scalable.service;
+package com.bits.scalable.service;
 
+import com.bits.scalable.domain.Customer;
+import com.bits.scalable.repository.CustomerRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import scalable.domain.Customer;
-import scalable.repository.CustomerRepository;
 
 @Service
 @Slf4j

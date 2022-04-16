@@ -1,4 +1,4 @@
-package scalable.domain;
+package com.bits.scalable.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -26,8 +26,11 @@ public class Customer {
     @JsonProperty("customer_name")
     private String customerName;
 
-    @JsonProperty("order_id")
-    private Long orderId;
+    @JsonProperty("phone_number")
+    private Long phoneNumber;
+
+    @JsonProperty("email_id")
+    private String emailId;
 
     @JsonProperty("address")
     private String address;

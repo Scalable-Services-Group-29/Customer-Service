@@ -1,7 +1,7 @@
-package scalable.repository;
+package com.bits.scalable.repository;
 
+import com.bits.scalable.domain.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
-import scalable.domain.Customer;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
