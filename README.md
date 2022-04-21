@@ -22,3 +22,10 @@ Connect to H2 console using: http://localhost:9003/h2-console
 1. Use gradle -> build to build the jar file for the CustomerService
 2. Run "docker build --build-arg JAR_FILE=build/libs/Customer-Service-0.0.1-SNAPSHOT.jar -t scalable-services/customer-service-spring-boot-docker ." command in the terminal to create the docker image for customer service
 3. Run "docker run -p 9003:9003 -t scalable-services/customer-service-spring-boot-docker" command to run the docker image which was created in previous step
+
+
+**MINIKUBE SETUP**
+1. Start minikube command: "minikube start"
+2. Build docker image command: "minikube image build customer"
+3. Run deployment.yaml file command: "kubectl apply -f deployment.yaml"
+4. Run the image in port command: "kubectl port-forward deployment/customer 9003:9003"
