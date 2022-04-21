@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer
+  labels:
+    name: customer
+spec:
+  selector:
+    matchLabels:
+      name: customer
+  template:
+    metadata:
+      labels:
+        name: customer
+    spec:
+      containers:
+        - name: customer
+          image: scalable-services/customer-service-spring-boot-docker
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 9003
