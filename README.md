@@ -26,6 +26,6 @@ Connect to H2 console using: http://localhost:9003/h2-console
 
 **MINIKUBE SETUP**
 1. Start minikube command: "minikube start"
-2. Build docker image command: "minikube image build customer"
+2. Build docker image command: "minikube image load scalable-services/customer-service-spring-boot-docker"
 3. Run deployment.yaml file command: "kubectl apply -f deployment.yaml"
 4. Run the image in port command: "kubectl port-forward deployment/customer 9003:9003"
